@@ -14,7 +14,7 @@ DEPS    = $(DENO) info
 DOCS    = $(DENO) doc mod.ts --json
 INSPECT = $(DENO) run --inspect-brk
 
-DENOVERSION = 1.24.2
+DENOVERSION = 1.25.1
 
 .PHONY: help clean deno-install install deno-version deno-upgrade check fmt dev env test bundle build inspect doc all release
 
@@ -50,7 +50,7 @@ fmt: ## deno format files
 	$(FMT)
 
 dev: ## deno run dev mode
-	$(RUN) --allow-all --unstable --watch mod.ts 
+	$(RUN) --allow-net --allow-read --allow-env=NODE_DEBUG --watch main.tsx --dev
 
 test: ## deno run test
 	$(TEST) --coverage=cov_profile
@@ -59,7 +59,7 @@ install:
 	$(DENO) install .
 
 bundle: ## deno build bundle
-	$(BUNDLE) mod.ts module.bundle.js
+	$(BUNDLE) main.ts module.bundle.js
 	
 clean: ## clean bundle and binary
 	rm -f module.bundle.js
@@ -68,17 +68,20 @@ clean: ## clean bundle and binary
 build: ## deno build binary
 	rm -f bin/*
 	$(BUILD) --output=bin/${NAME} -A --unstable mod.ts
-	$(BUILD) --output=bin/${NAME}.exe --target=x86_64-pc-windows-msvc -A --unstable mod.ts
-	$(BUILD) --output=bin/${NAME}_x86_64 --target=x86_64-unknown-linux-gnu -A --unstable mod.ts
-	$(BUILD) --output=bin/${NAME}_darwin_x86_64 --target=x86_64-apple-darwin -A --unstable mod.ts
-	$(BUILD) --output=bin/${NAME}_darwin_aarch64 --target=x86_64-apple-darwin -A --unstable mod.ts
+	$(BUILD) --output=bin/${NAME}.exe --target=x86_64-pc-windows-msvc -A --unstable main.ts
+	$(BUILD) --output=bin/${NAME}_x86_64 --target=x86_64-unknown-linux-gnu -A --unstable main.ts
+	$(BUILD) --output=bin/${NAME}_darwin_x86_64 --target=x86_64-apple-darwin -A --unstable main.ts
+	$(BUILD) --output=bin/${NAME}_darwin_aarch64 --target=x86_64-apple-darwin -A --unstable main.ts
 
 inspect: ## deno inspect 
 	@echo "Open chrome & chrome://inspect"
-	$(INSPECT) --allow-all --unstable mod.ts
+	$(INSPECT) --allow-all --unstable main.ts
 
 doc: ## deno doc
 	$(DOCS) > docs.json
+
+vendor: ## deno vendor
+	$(DENO) vendor main.tsx
   
 release:
 	git tag $(VERSION)

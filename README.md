@@ -1,4 +1,4 @@
-[![Minimal deno version](https://img.shields.io/static/v1?label=deno&message=%3E=1.24.1.0&color)](https://deno.land/manual@v1.23.4/getting_started)
+[![Minimal deno version](https://img.shields.io/static/v1?label=deno&message=%3E=1.25.1.0&color)](https://deno.land/manual@v1.23.4/getting_started)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/stephen-shopopop/deno-template/graphs/commit-activity)
 [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
 [![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg)
@@ -8,12 +8,14 @@
 
 [Installation deno](https://deno.land/#installation)
 
+- [Deno blog](https://github.com/denoland/deno_blog)
 - [Documentation](https://doc.deno.land/https://raw.githubusercontent.com/stephen-shopopop/deno-template/main/mod.ts)
 - [cheat code](https://oscarotero.com/deno/?utm_source=denonews&utm_medium=email)
+
 ## Usage
 
 ```bash
-deno run --allow-env --allow-run mod.ts
+deno run --allow-net --allow-read --allow-env --no-check main.tsx
 ```
 
 ### Tasks (unstable)
