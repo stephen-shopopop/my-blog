@@ -11,7 +11,6 @@ FMT     = $(DENO) fmt
 LINT    = $(DENO) lint
 BUILD   = $(DENO) compile
 DEPS    = $(DENO) info
-DOCS    = $(DENO) doc mod.ts --json
 INSPECT = $(DENO) run --inspect-brk
 
 DENOVERSION = 1.25.1
@@ -58,27 +57,9 @@ test: ## deno run test
 install:
 	$(DENO) install .
 
-bundle: ## deno build bundle
-	$(BUNDLE) main.ts module.bundle.js
-	
-clean: ## clean bundle and binary
-	rm -f module.bundle.js
-	rm -fr bin
-
-build: ## deno build binary
-	rm -f bin/*
-	$(BUILD) --output=bin/${NAME} -A --unstable mod.ts
-	$(BUILD) --output=bin/${NAME}.exe --target=x86_64-pc-windows-msvc -A --unstable main.ts
-	$(BUILD) --output=bin/${NAME}_x86_64 --target=x86_64-unknown-linux-gnu -A --unstable main.ts
-	$(BUILD) --output=bin/${NAME}_darwin_x86_64 --target=x86_64-apple-darwin -A --unstable main.ts
-	$(BUILD) --output=bin/${NAME}_darwin_aarch64 --target=x86_64-apple-darwin -A --unstable main.ts
-
 inspect: ## deno inspect 
 	@echo "Open chrome & chrome://inspect"
 	$(INSPECT) --allow-all --unstable main.ts
-
-doc: ## deno doc
-	$(DOCS) > docs.json
 
 vendor: ## deno vendor
 	$(DENO) vendor main.tsx

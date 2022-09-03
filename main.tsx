@@ -15,7 +15,6 @@ blog({
   ],
   avatar:
     "https://avatars.githubusercontent.com/u/94382341?s=400&u=b72fa0e3214b270320f7bc3e93fbae0ca4aefa19&v=4",
-  // avatar: "https://deno-avatar.deno.dev/avatar/blog.svg",
   avatarClass: "rounded-full",
   author: "Stephen",
   dateStyle: "long",
