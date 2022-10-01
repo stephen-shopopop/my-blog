@@ -1,5 +1,5 @@
 ---
-title: API REST
+title: API ReST
 publish_date: 2022-10-01
 ---
 
