@@ -3,8 +3,8 @@
 import blog, { ga, h, redirects } from "blog";
 
 blog({
-  title: "API REST",
-  description: "GUIDE API REST",
+  title: "GUIDE API REST",
+  description: "stephen D.",
   // header: <header>Your custom header</header>,
   // section: <section>Your custom section</section>,
   // footer: <footer>Your custom footer</footer>,
@@ -16,7 +16,7 @@ blog({
   avatar:
     "https://avatars.githubusercontent.com/u/94382341?s=400&u=b72fa0e3214b270320f7bc3e93fbae0ca4aefa19&v=4",
   avatarClass: "rounded-full",
-  author: "Stephen",
+  author: "stephen",
   dateStyle: "long",
   lang: "fr",
   // middlewares: [
