@@ -10,6 +10,7 @@ ReST n’est pas un standard mais un style d’architecture.
 - [LES REGLES](#les-regles)
   - [Séparation client/serveur](#séparation-clientserveur)
   - [Stateless](#stateless)
+- [references](https://standards.rest)
 
 ## ECO SYSTEME
 
