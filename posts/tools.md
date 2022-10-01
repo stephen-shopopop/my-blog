@@ -1,9 +1,9 @@
 ---
-title: Les outils!
+title: API ReSt Les outils!
 publish_date: 2022-10-01
 ---
 
-## Liste des outils
+## Liste des outils API ReST
 
 1. [Swagger](#swagger)
 2. [OpenAPI Visual Editor](#openapi-editors-ui)
