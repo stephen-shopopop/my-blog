@@ -11,6 +11,7 @@
 - [Deno blog](https://github.com/denoland/deno_blog)
 - [Documentation](https://doc.deno.land/https://raw.githubusercontent.com/stephen-shopopop/deno-template/main/mod.ts)
 - [cheat code](https://oscarotero.com/deno/?utm_source=denonews&utm_medium=email)
+- [Api rest](https://guide-api-rest.marmicode.fr/api-rest)
 
 ## Usage
 
