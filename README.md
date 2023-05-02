@@ -14,7 +14,7 @@
 - [Api rest](https://guide-api-rest.marmicode.fr/api-rest)
 - [google error](https://download.huihoo.com/google/gdgdevkit/DVD1/developers.google.com/storage/docs/json_api/v1/status-codes.html)
 - [rfc5789](https://datatracker.ietf.org/doc/html/rfc5789)
-- [rfc6902 - JSON PATCH](https://datatracker.ietf.org/doc/html/rfc6902)
+- [rfc6902 - JSON PATCH](https://datatracker.ietf.org/doc/html/rfc6902) - [doc](https://williamdurand.fr/2014/02/14/please-dont-patch-like-that/)
 - [zalando] (https://opensource.zalando.com/restful-api-guidelines/#http-requests)
 
 ## Usage
